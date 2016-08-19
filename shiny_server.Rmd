@@ -46,7 +46,11 @@ AWS provides the step-by-step instructions for this part:
 
 - Windows - http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
 
+       Complete sections **Converting Your Private Key Using PuTTYgen** and **Starting a PuTTY Session**
+
 - Non-Windows - http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html
+
+       Only go through the instructions in the **To connect to your instance using SSH** section
 
 ### Install R
 
