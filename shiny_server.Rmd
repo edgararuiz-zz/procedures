@@ -52,7 +52,7 @@ AWS provides the step-by-step instructions for this part:
 
 We need to update the package list so that Ubuntu installs the latest R version.  Here is the reference: https://cran.r-project.org/bin/linux/ubuntu/
 
-**Tip: ** The terminal commands inside the boxes can be copied and pasted into your terminal session.  In **putty** you can use right-click as the "paste" command.
+**Tip** The terminal commands inside the boxes can be copied and pasted into your terminal session.  In **putty** you can use right-click as the "paste" command.
 
 ```{}
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list'
