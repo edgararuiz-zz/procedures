@@ -23,7 +23,7 @@ output: html_document
     
     **Optional: If you want to open your Shiny server to the world** - Click Add Rule, select Type: **Custom TCP Rule** | Port Range: **3838** |Source: **Anywhere**
 
-    **Optional: If you plan to have to publish apps from a RStudio server withi the local network (VPC)** - Click Add Rule, select Type: **All Traffic** | Source: **Custom** and enter the the first two 
+    **Optional: If you plan to have to publish apps from a RStudio server within the local network (VPC)** - Click Add Rule, select Type: **All Traffic** | Source: **Custom** and **type the the first two numbers in the IP address followed by '.0.0/16'** (So,if your Shiny server's internal IP address is 172.31.2.200 then you'd enter 172.31.0.0/16 This gives every server in your VPC access to your Shiny server and to each other)
 
 
 - After clicking **Launch** the **"Select existing pair or create a new pair"** screen will appear, select:
@@ -161,6 +161,8 @@ sudo su - -c "R -e \"install.packages('flexdashboard', repos='http://cran.us.r-p
 The following method sets up a single user in the RStudio server to have 'write' access in the Shiny server.  Using Samba, we will create a shared folder inside the RStudio server user that maps directly to the Shiny server **shiny-server** folder.  In order for RStudio to create folders and files, a specific user needs to logged on in the RStudio server.  This is why we are not putting the 'shiny-server' mount point in a more generic location. For purposes of this document, I'll use **shiny-user** as the user.  
 
 The assumption is made that the 'client' RStudio server is running an Ubuntu (Debian) distribution.
+
+**Make sure to perform the second optional security setting in the 'AWS/EC2 Setup' section**
 
 The plan is to: 
 
